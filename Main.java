@@ -12,7 +12,7 @@ import java.io.IOException;
 class CipherAppSwing {
     public static void main(String[] args) {
         // Membuat JFrame
-        JFrame frame = new JFrame("Cipher Encryptor/Decryptor");
+        JFrame frame = new JFrame("Kriptografi");
         frame.setSize(500, 500); // Ukuran frame yang lebih luas
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
@@ -39,7 +39,7 @@ class CipherAppSwing {
         constraints.insets = new Insets(10, 10, 10, 10); // Padding antar elemen
 
         // Judul
-        JLabel titleLabel = new JLabel("Cipher Encryptor/Decryptor", JLabel.CENTER);
+        JLabel titleLabel = new JLabel("Kriptografi", JLabel.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 20));
         titleLabel.setForeground(new Color(33, 150, 243)); // Warna biru modern
         constraints.gridx = 0;
@@ -108,15 +108,17 @@ class CipherAppSwing {
 
         // Label untuk hasil
         JLabel resultLabel = new JLabel("Hasil:");
+        resultLabel.setFont(new Font("SansSerif", Font.PLAIN, 14));
         constraints.gridx = 0;
         constraints.gridy = 5;
         panel.add(resultLabel, constraints);
 
         // Text area untuk menampilkan hasil
-        JTextArea resultArea = new JTextArea(5, 20);
+        JTextArea resultArea = new JTextArea(5, 15);
+        resultArea.setFont(new Font("SansSerif", Font.PLAIN, 14));
         resultArea.setLineWrap(true);
         resultArea.setWrapStyleWord(true);
-        resultArea.setEditable(false); // Hanya bisa dibaca
+        resultArea.setEditable(true);
         JScrollPane scrollPane = new JScrollPane(resultArea);
         constraints.gridx = 1;
         constraints.gridy = 5;
