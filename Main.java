@@ -113,12 +113,10 @@ class CipherAppSwing {
         constraints.gridy = 5;
         panel.add(resultLabel, constraints);
 
-        // Text area untuk menampilkan hasil
         JTextArea resultArea = new JTextArea(5, 15);
         resultArea.setFont(new Font("SansSerif", Font.PLAIN, 14));
         resultArea.setLineWrap(true);
         resultArea.setWrapStyleWord(true);
-        resultArea.setEditable(true);
         JScrollPane scrollPane = new JScrollPane(resultArea);
         constraints.gridx = 1;
         constraints.gridy = 5;
